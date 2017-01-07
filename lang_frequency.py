@@ -31,11 +31,11 @@ if __name__ == '__main__':
         print("You should specify a file to analyze!")
         sys.exit(0)
     if load_data(path_to_file):
-        data = load_data(path_to_file)
+        data_from_file = load_data(path_to_file)
     else:
         print("Incorrect path to the file!")
         sys.exit(0)
-    lang_frequency = get_most_frequent_words(data)
+    lang_frequency = get_most_frequent_words(data_from_file)
     for iterator, word in enumerate(lang_frequency):
         print("Word '%s' repeated in the text %s times" % (word[0], word[1]))
         if iterator >= 9:
